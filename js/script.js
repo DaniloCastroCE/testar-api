@@ -20,14 +20,26 @@ const clickBtn = () => {
     const url = inp.value.trim()
     
     if(url){
-        getApi(url, (result) => {
-            const painel = document.querySelector('#painel')
-            const txt = JSON.stringify(result, null, 2)
-            painel.innerHTML = txt.replace(/\n/g, '<br>').replace(/\{/g, '{<br>').replace(/\}/g, '}<br>')
-            
-        })
+        try {
+            getApi(url, (result) => {
+                const painel = document.querySelector('#painel')
+                const txt = JSON.stringify(result, null, 2)
+                painel.innerHTML = txt.replace(/\n/g, '<br>').replace(/\{/g, '{<br>').replace(/\}/g, '}<br>')
+                
+            })
+        } catch (err) {
+            console.error(err)
+            //throw new Error('Erro ao tentar acessar o arquivo local devido a CORS');
+        }
     }
 }
+
+const clear = () => {
+    document.querySelector('#painel').innerHTML = ""
+    inp.value = ""
+}
+
+document.querySelector("#clear").addEventListener('click', () => clear())
 
 const getApi = async (url, callback) => {
     try {

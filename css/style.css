@@ -27,7 +27,11 @@ body, html {
     font-weight: 700;
 }
 .btn {
+    
+}
 
+.gap {
+    gap: 10px;
 }
 
 #painel {
