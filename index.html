@@ -7,14 +7,29 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="centralizar box flex-direction-coluna ">
-        <input id="input" class="inp padding10px20px" type="text">
+    <div class="centralizar box flex-direction-coluna">
+        <div class="centralizar gap">
+            <input id="input" class="inp padding10px20px" type="text">
+            <div id="add" class="icons centralizar" onclick="addText()">
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    height="24px" 
+                    viewBox="0 -960 960 960" 
+                    width="24px" 
+                    fill="#273b6e">
+                    <path 
+                        d="M520-400h80v-120h120v-80H600v-120h-80v120H400v80h120v120ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
+            </div>
+        </div>
         <div class="centralizar gap">
             <button id="get" class="btn padding10px20px">GET</button>
             <button id="clear" class="btn padding10px20px">limpar</button>
         </div>
     </div>
-    <p id="painel" class="centralizar"></p>
+    <div class="container_painel">
+        <textarea class="box_painel" name="textareaAddText" id="textareaAddText"></textarea>
+        <p id="painel" class="box_painel"></p>
+    </div>
     <script src="./js/script.js"></script>
 </body>
 </html>

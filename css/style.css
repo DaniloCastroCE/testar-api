@@ -15,8 +15,9 @@ body, html {
 }
 
 .box {
-    width: auto;
+    width: fit-content;
     height: auto;
+    margin: 15px auto 2px;
 }
 
 .padding10px20px {
@@ -30,16 +31,38 @@ body, html {
     
 }
 
+.icons {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.selecionado {
+    outline: 4px solid blue;
+}
+
 .gap {
     gap: 10px;
 }
 
-#painel {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-}
-
 .flex-direction-coluna {
     flex-direction: column;
+}
+
+#textareaAddText {
+    display: none;
+    min-width: 400px;
+    min-height: 100px;
+}
+
+.container_painel {
+    margin: 2px auto;
+}
+
+.box_painel {
+    display: block;
+    width: fit-content;
+    max-width: 90%;
+    max-height: 100%;
+    margin: 0 auto;
 }
